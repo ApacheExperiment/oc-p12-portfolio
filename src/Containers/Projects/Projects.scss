@@ -1,0 +1,106 @@
+.projects {
+    margin-top: 8%;
+    margin-bottom: 10%;
+    padding-top: 9%;
+
+  .title-icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    &__Title {
+      display: flex;
+      justify-content: center;
+    }
+    .icon-add-wrapper {
+      position: relative;
+      display: inline-block;
+ 
+      .icon-add {
+        position: absolute;
+        top:-9px;
+        left:5px;
+        transition: opacity 0.3s ease;
+        width: 25px;
+        height: 32px;
+        cursor: pointer;
+      }
+      .icon-add.hidden {
+        opacity: 0;
+      } 
+    }
+    
+  } 
+  &__Container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    flex-wrap: wrap;
+    padding: 55px;
+  }
+  
+  .selectedProject{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__Title {
+      text-align: center;
+      color:rgba(84, 47, 21, 0.43);
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    &__border {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+      background-color: #fff;
+      border: 5px solid #f4f4f4;
+      padding: 5px;
+      width: 90%;
+      p {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 40px;
+        font-size: 19px;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+      /*ul {
+        text-align: justify;
+        padding: 20px 40px 20px 60px;
+        font-size: 18px;
+      }
+      li {
+        padding: 10px 0;
+      }*/
+    }
+  }
+}
+
+@media screen and (max-width: 986px) {
+  .projects {
+    &__Container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media screen and (max-width: 670px) {
+  .projects {
+    &__Container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .projects {
+    &__Container {
+      padding: 70px 1vw;
+    }
+  }
+}

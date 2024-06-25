@@ -1,0 +1,26 @@
+.main {
+    position: relative;
+    .contentWrapper {
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+}
+.main:before,
+.main:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc((100% - 1200px) / 2);
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f5;
+}
+.main:before {
+    left: 0;
+    z-index: 1;
+}
+  
+.main:after {
+    right: 0;
+    z-index: 1;
+}

@@ -1,0 +1,27 @@
+.notFound {
+    text-align: center;
+    margin-top: 330px;
+}
+  
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #087EA4;
+}
+  
+.message {
+    margin-bottom: 40px;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: rgba(84, 47, 21, 0.43);
+}
+  
+.homeLink {
+    font-size: 1.2rem;
+    color: #087EA4;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+}

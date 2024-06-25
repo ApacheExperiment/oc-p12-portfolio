@@ -1,0 +1,101 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 500px;
+    margin: 20px auto 50px;
+  
+    .label {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .input, .textarea {
+        margin: 10px 0 15px 0;
+        padding: 10px;
+        border: 2px solid rgba(84, 47, 21, 0.43);
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .textarea {
+        height: 190px;
+        font-family: Lato;
+    }
+    .centerInput {
+        display: flex;
+        justify-content: center;
+    
+        .button {
+            display: flex;
+            align-items: center;
+            background-color: #087EA4;
+            color: white;
+            border: none;
+            padding: 12px 21px;
+            cursor: pointer;
+            border-radius: 21px;
+            font-size: 17px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: white;
+            color:#087EA4;
+        }
+        .iconSend {  
+            width: 20px;
+            height: 11px;
+            transform: translate(40%, 2%);
+            transition: transform 0.4s ease, opacity 0.3s ease;
+            opacity: 1;
+        }
+
+        .button:hover .iconSend {
+            transform: translateX(100%) translateY(5%);
+            opacity: 0; 
+        }
+    }
+    .validation {
+        color:rgba(84, 47, 21, 0.43);
+        font-size: 19px;
+        text-align: center;
+        font-weight: 600;
+    }
+    .email {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        &__space {
+            padding-left: 5px;
+            color:rgba(84, 47, 21, 0.43);;
+            font-size: 17px;
+        }
+        &__space:hover {
+            color: #087EA4;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .form {
+        width: 440px;
+        .input, .textarea  {
+            margin-left: 0;
+        }
+    }
+}
+@media screen and (max-width: 470px) {
+    .form {
+        width: 90vw;
+        .label {
+            text-align: center;
+        }
+        .email {
+            font-size: 14px;
+        
+            &__space {
+                font-size: 16px;
+            }
+        }
+    }
+}

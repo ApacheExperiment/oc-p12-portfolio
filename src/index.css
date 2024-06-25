@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: 'Lato';
+}
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1 {
+  font-family: 'Playfair Display', sans-serif;
+}
+h2 {
+  font-size: 40px;
+  color: rgba(84, 47, 21, 0.43);
+  font-weight: 400;
+}
+h3 {
+  font-size: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

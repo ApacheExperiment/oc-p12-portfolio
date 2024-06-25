@@ -1,0 +1,27 @@
+.footer {
+    display: flex;
+    justify-content: center; 
+    .credits {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        padding: 25px 0 25px 0;
+        .reactI {
+            height: 25px;
+            width: 25px;
+            margin: 0 3px;
+        }
+        .pocketbase {
+            height: 29px;
+            width: 30px;
+            margin: 0 3px;
+        }
+    }
+}
+.footer::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	border-top: 2px solid rgba(84, 47, 21, 0.43);
+}

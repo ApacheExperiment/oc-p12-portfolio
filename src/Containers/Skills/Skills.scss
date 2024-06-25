@@ -1,0 +1,147 @@
+.skills {
+    margin-top: 10%;
+    margin-bottom: 29%;
+    padding-top: 9%;
+
+    .titleSkills {
+        display: flex;
+        justify-content: center;
+    }
+    .pSkills {
+        margin: 25px 0 30px 0;
+        font-size: 19px;
+        text-align: center;
+    }
+    .langagesSkills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        gap: 35px;
+    }
+    .border {
+        background-color: #fff;
+        border: 5px solid #f4f4f4;
+        border-radius: 10px;
+        padding: 5px;
+        width: 23vw;
+        .containerSkills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 15px 0 30px 0;
+        
+            .subtitleSkills {
+                margin-bottom: 35px;
+                position: relative;
+            }
+            
+            .containerIcons {
+                display: flex;
+                .iconAndP {
+                    display: flex;  
+                    flex-direction: column;
+                    align-items: center;
+                    margin-right: 15px;
+                    margin-left: 15px;
+                    .iconWrapper {
+                        position: relative;
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        .icon {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            transition: opacity 0.5s linear;
+                        }
+                    
+                        .iconReverse {
+                            opacity: 0;
+                        }
+                    
+                        &:hover .iconReverse {
+                            opacity: 1;
+                        }
+                    
+                        &:hover .iconInitial {
+                            opacity: 0;
+                        }
+                    }
+                    .iconP{
+                        color:rgba(84, 47, 21, 0.43);
+                        font-weight: 700;
+                        font-size: 16px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .border:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        transition: 0.7s linear;
+        color: #087EA4;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .skills {
+        .border {
+            width: 32vw;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .skills {
+        .pSkills {
+            margin: 0 20px;
+        }
+        .langagesSkills {
+            display: flex;
+        }
+        .border {
+            width:45vw;
+            .containerSkills {
+                display: flex;
+                align-items: center;
+                background-color: #f4f4f4;
+                padding:30px;
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .skills {
+        .border {
+            width: 80vw;
+          .containerSkills {
+            .subtitleSkills {
+              text-align: center;
+            }
+    
+            .containerIcons {
+              .iconAndP {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+@media screen and (max-width: 425px) {
+    .skills {
+        .border {
+            width:95vw;
+        }
+    }
+}
