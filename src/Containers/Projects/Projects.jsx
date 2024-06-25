@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './Projects.scss';
 import Project from '../../Components/Project/Project';
-import add from '../../assets/img/icon/Initial/icon-add.png'
-import addReverse from '../../assets/img/icon/Reverse/icon-add-Reverse.png'
+import add from '../../assets/img/icon/Initial/icon-add.webp'
+import addReverse from '../../assets/img/icon/Reverse/icon-add-Reverse.webp'
 import pb from '../../pocketbase';
 import { useAuth } from '../../Service/AuthContext';
 import { useNavigate } from 'react-router-dom';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './add.scss';
-import sendLetter from "../assets/img/icon/icon-letter-white.png";
-import arrow from '../assets/img/icon/icon-arrow-left.png';
+import sendLetter from "../assets/img/icon/icon-letter-white.webp";
+import arrow from '../assets/img/icon/icon-arrow-left.webp';
 import { Link } from 'react-router-dom';
 import PocketBase from 'pocketbase';
 

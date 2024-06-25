@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './Form.scss';
-import sendLetter from "../../assets/img/icon/icon-letter-white.png";
+import sendLetter from "../../assets/img/icon/icon-letter-white.webp";
 import pb from "../../pocketbase";
 
 export default function Form() {

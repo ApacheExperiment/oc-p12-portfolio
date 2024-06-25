@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import './login.scss'
-import arrow from "../assets/img/icon/icon-arrow-left.png";
+import arrow from "../assets/img/icon/icon-arrow-left.webp";
 import { useAuth } from '../Service/AuthContext';
 
 export default function Login() {

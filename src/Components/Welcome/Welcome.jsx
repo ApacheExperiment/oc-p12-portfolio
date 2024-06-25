@@ -2,7 +2,7 @@ import React from 'react';
 /*import { Link } from 'react-router-dom';*/
 import './Welcome.scss';
 import Button from '../Button/Button'; 
-import profile from "../../assets/img/test.png";
+import profile from "../../assets/img/AlexisBréchet.webp";
 import githubLogo from "../../assets/img/icon/Initial/icon-github-reverse.webp";
 import githubLogoReverse from "../../assets/img/icon/Reverse/icon-github.webp";
 import linkedinLogo from "../../assets/img/icon/Initial/icon-linkedin-reverse.webp";
@@ -11,8 +11,8 @@ import Fcc from "../../assets/img/icon/Initial/icon-FCC.webp"
 import FccReverse from "../../assets/img/icon/Reverse/icon-FCC-Reverse.webp"
 import CIG from "../../assets/img/icon/Initial/icon-Codingame.webp"
 import CIGReverse from "../../assets/img/icon/Reverse/icon-Codingame-Reverse.webp"
-import Logout from '../../assets/img/icon/Initial/icon-logout.png';
-import Login from '../../assets/img/icon/Reverse/icon-login-blue.png';
+import Logout from '../../assets/img/icon/Initial/icon-logout.webp';
+import Login from '../../assets/img/icon/Reverse/icon-login-blue.webp';
 import { useAuth } from '../../Service/AuthContext';
 
 export default function Welcome() {
