@@ -22,7 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# form_to_mail
-emailConfig.js
+
 # Local Netlify folder
 .netlify
