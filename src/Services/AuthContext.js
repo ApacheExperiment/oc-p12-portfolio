@@ -1,15 +1,16 @@
 // src/context/AuthContext.js
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import PocketBase from 'pocketbase';
+import pb from '../pocketbase';
 
-// Créez une instance de PocketBase
-const pb = new PocketBase('http://127.0.0.1:8090');
-
+// Création d'un contexte d'authentification
 const AuthContext = createContext();
 
+// Définition du fournisseur de contexte d'authentification
 export const AuthProvider = ({ children }) => {
+  // État pour suivre si l'utilisateur est authentifié
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  // Utilisation de useEffect pour vérifier l'authentification lors du montage du composant
   useEffect(() => {
     const checkAuth = async () => {
       const admin = pb.authStore.model;
@@ -30,6 +31,7 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
+  // Fonction de connexion
   const login = async (email, password) => {
     try {
       await pb.admins.authWithPassword(email, password);
@@ -41,6 +43,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // Fonction de déconnexion
   const logout = () => {
     pb.authStore.clear();
     document.cookie = pb.authStore.exportToCookie({ httpOnly: false }); // Supprimez le token du cookie
@@ -48,6 +51,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
+    // Fournit le contexte d'authentification aux composants enfants
     <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
       {children}
     </AuthContext.Provider>

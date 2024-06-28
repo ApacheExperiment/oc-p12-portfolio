@@ -26,14 +26,16 @@ import mdxLogo from "../../assets/img/icon/Initial/icon-mdx.webp";
 import mdxLogoReverse from "../../assets/img/icon/Reverse/icon-mdx-Reverse.webp";
 import pocketbase from "../../assets/img/icon/Initial/icon-Pocketbase.webp";
 import pocketbaseReverse from "../../assets/img/icon/Reverse/icon-Pocketbase-Reverse.webp"
+import { useTranslation } from 'react-i18next';
 
 
 export default function Skills() {
+    const { t } = useTranslation();
     return (
         <section id="skills" className="skills">
-            <h2 className="titleSkills">Compétences</h2>
+            <h2 className="titleSkills">{t('titleSkills')}</h2>
             <p className="pSkills">
-                Mon point d'encrage étant la partie visuelle et l'expérience utilisateur, je cherche néanmoins à comprendre et à apprendre la gestion de données et tout ce qui constitue le développement back-end.<br />
+                {t('pSkills')}
             </p>
             <div className="langagesSkills">
                 <div className="border">

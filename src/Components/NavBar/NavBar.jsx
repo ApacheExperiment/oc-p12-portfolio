@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import './NavBar.scss';
-/*import Logout from '../../assets/img/icon/Initial/icon-logout.png';
-import Login from '../../assets/img/icon/Reverse/icon-login.png';
-import { useAuth } from '../../Service/AuthContext';*/
+import { useTranslation } from 'react-i18next';
 
 const NavBar = ({ active }) => {
+  const { t } = useTranslation();
+
   const [activeItem, setActiveItem] = useState(active);
   const location = useLocation();
 
@@ -27,7 +27,6 @@ const NavBar = ({ active }) => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  //const { isAuthenticated, logout } = useAuth();
 
   return (
     <div className="navContainer">
@@ -35,35 +34,13 @@ const NavBar = ({ active }) => {
         <div className="navBackground">
           <ul className="navList">
             <li className={activeItem === 'home' ? 'navItem active' : 'navItem'}>
-              <Link to="#home" onClick={() => handleClick('#home')}>Accueil</Link>
+              <Link to="#home" onClick={() => handleClick('#home')}>{t('navbarWelcome')}</Link>
             </li>
             <li className={activeItem === 'projects' ? 'navItem active' : 'navItem'}>
-              <Link to="#projects" onClick={() => handleClick('#projects')}>Projets</Link>
+              <Link to="#projects" onClick={() => handleClick('#projects')}>{t('navbarProjects')}</Link>
             </li>
-            {/*<li className="authIcons">
-              {isAuthenticated ? (
-                <img
-                  src={Login}
-                  alt="Login icon"
-                  width={20}
-                  height={20}
-                  className="iconLog"
-                  onClick={logout}
-                />
-              ) : (
-                <a href="/login">
-                  <img
-                    src={Logout}
-                    alt="Logout icon"
-                    width={20}
-                    height={20}
-                    className="iconLog"
-                  />
-                </a>
-              )}
-            </li>*/}
             <li className={activeItem === 'skills' ? 'navItem active' : 'navItem'}>
-              <Link to="#skills" onClick={() => handleClick('#skills')}>Compétences</Link>
+              <Link to="#skills" onClick={() => handleClick('#skills')}>{t('navbarSkills')}</Link>
             </li>
             <li className={activeItem === 'contact' ? 'navItem active' : 'navItem'}>
               <Link to="#contact" onClick={() => handleClick('#contact')}>Contact</Link>

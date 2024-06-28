@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import './login.scss'
 import arrow from "../assets/img/icon/icon-arrow-left.webp";
-import { useAuth } from '../Service/AuthContext';
+import { useAuth } from '../Services/AuthContext';
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -45,7 +45,7 @@ export default function Login() {
                         required
                         className="inputLog" 
                     />
-                    <label htmlFor="password" className="labelLog">Password</label>
+                    <label htmlFor="password" className="labelLog">Mot de passe</label>
                     <input 
                         type="password" 
                         name="password"

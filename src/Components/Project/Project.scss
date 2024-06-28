@@ -86,6 +86,24 @@
       cursor: pointer;
       margin-top: 8px;
     }
+    .icon-delete-wrapper {
+      position: fixed;
+      display: inline-block;
+
+ 
+      .icon-delete {
+        position: fixed;
+        top:10px;
+        right:10px;
+        transition: opacity 0.3s ease;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+      }
+      .icon-delete.hidden {
+        opacity: 0;
+      } 
+    }
 }
 
 @media (max-width: 600px) {

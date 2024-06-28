@@ -4,10 +4,13 @@ import Project from '../../Components/Project/Project';
 import add from '../../assets/img/icon/Initial/icon-add.webp'
 import addReverse from '../../assets/img/icon/Reverse/icon-add-Reverse.webp'
 import pb from '../../pocketbase';
-import { useAuth } from '../../Service/AuthContext';
+import { useAuth } from '../../Services/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
  
 const Projects = () => {
+  const { t } = useTranslation();
+  // États pour stocker les projets et le projet sélectionné
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null); // Pour stocker le projet sélectionné
   const selectedProjectRef = useRef(null);
@@ -15,6 +18,7 @@ const Projects = () => {
   const { isAuthenticated } = useAuth();
   const [isHovered, setIsHovered] = useState(false);
 
+  // Utilisation de useEffect pour récupérer les projets lors du montage du composant
   useEffect(() => {
     async function fetchProjects() {
       try {
@@ -26,6 +30,7 @@ const Projects = () => {
         setProjects(records);
       } catch (error) {
         if (error.response) {
+          
         }
       }
     }
@@ -52,6 +57,7 @@ const Projects = () => {
     };
   }, [selectedProject]);
 
+  // Gestionnaire de clic pour naviguer vers la page d'ajout de projet
   const handleClickNext = async (projectId) => {
     try {
       // Fetch des détails du projet correspondant dans la collection Projects
@@ -66,10 +72,14 @@ const Projects = () => {
     navigate('/add');
   };
 
+  const handleDelete = (projectId) => {
+    setProjects((prevProjects) => prevProjects.filter(project => project.id !== projectId));
+  };
+
   return (
     <section id="projects" className="projects">
       <div className="title-icon-wrap">
-        <h2 className="projects__Title">Projets</h2>
+        <h2 className="projects__Title">{t('projectsTitle')}</h2>
         {isAuthenticated && (
           <div
           className="icon-add-wrapper"
@@ -92,8 +102,8 @@ const Projects = () => {
       </div>
       <div className="projects__Container">
         {projects.map((project, index) => (
-          <div className="allProjectsProject" key={index}>
-            <Project projectsData={project} onClickNext={handleClickNext} />
+          <div className="allProjects" key={index}>
+            <Project projectsData={project} onClickNext={handleClickNext} onDelete={handleDelete}/>
           </div>
         ))}
       </div>

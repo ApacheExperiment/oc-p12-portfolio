@@ -1,5 +1,4 @@
 import React from 'react';
-/*import { Link } from 'react-router-dom';*/
 import './Welcome.scss';
 import Button from '../Button/Button'; 
 import profile from "../../assets/img/AlexisBréchet.webp";
@@ -13,9 +12,12 @@ import CIG from "../../assets/img/icon/Initial/icon-Codingame.webp"
 import CIGReverse from "../../assets/img/icon/Reverse/icon-Codingame-Reverse.webp"
 import Logout from '../../assets/img/icon/Initial/icon-logout.webp';
 import Login from '../../assets/img/icon/Reverse/icon-login-blue.webp';
-import { useAuth } from '../../Service/AuthContext';
+import LanguageSelector from '../../Components/LanguageSelector/LanguageSelector';
+import { useTranslation } from 'react-i18next';
+import { useAuth } from '../../Services/AuthContext';
 
 export default function Welcome() {
+  const { t } = useTranslation();
   const { isAuthenticated, logout } = useAuth();
 
   return (
@@ -47,7 +49,8 @@ export default function Welcome() {
         Alexis
         Bréchet
       </h1>
-      <h2 className="subtitle">Développeur Front-End</h2>
+      <h2 className="subtitle">{t('subtitleWelcome')}</h2>
+      <LanguageSelector />
       <div className="links">
         <div className="iconContainer">
           <div className="iconWrapper">
@@ -124,14 +127,11 @@ export default function Welcome() {
           </div>
         </div>
         <Button />
+        
       </div>
       
       <div className="border">
-        <p className="aboutP">
-          Après avoir travaillé pendant plusieurs années dans le milieu du commerce, principalement dans le milieu culturel et les bars spécialisés brassicole. En expérimentant plusieurs postes dont chef d'équipe et de patron associé.<br />
-          <br />J'ai commencé mon apprentissage dans le domaine du développement front-end au sein d'Open Class Rooms sur mon temps libre et j'ai compris très rapidement que ce domaine qui était une curiosité devenait une préoccupation grandissante.<br />
-          <br />J'ai entrepris une reconversion afin de faire valider et d'approfondir mes compétences avec un premier diplôme en développement front-end.  <br />
-          <br />Curieux et passionné, mon objectif est de m'améliorer et d'apprendre davantage dans un domaine qui est en perpétuelle évolution chaque jour.
+        <p className="aboutP" dangerouslySetInnerHTML={{ __html: t('about') }}>
         </p>
       </div>
     </section>

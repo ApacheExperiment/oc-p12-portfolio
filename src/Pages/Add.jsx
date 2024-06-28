@@ -3,11 +3,11 @@ import './add.scss';
 import sendLetter from "../assets/img/icon/icon-letter-white.webp";
 import arrow from '../assets/img/icon/icon-arrow-left.webp';
 import { Link } from 'react-router-dom';
-import PocketBase from 'pocketbase';
+import pb from '../pocketbase';
 
-const pb = new PocketBase('http://127.0.0.1:8090');
+const Add = () => {   // Composant Add pour ajouter un projet et une vignette
 
-const Add = () => {
+  // États pour stocker les données du projet et de la vignette
   const [projectData, setProjectData] = useState({
     title: '',
     date: '',
@@ -27,28 +27,33 @@ const Add = () => {
     iconGitHub: null,
     iconDetails: null,
   });
-
+  // État pour les messages d'information ou d'erreur
   const [message, setMessage] = useState('');
 
+  // Gestionnaire de changement pour les champs de saisie du projet
   const handleProjectInputChange = (e) => {
     const { name, value } = e.target;
     setProjectData({ ...projectData, [name]: value });
   };
 
+  // Gestionnaire de changement pour les champs de saisie de la vignette
   const handleThumbnailInputChange = (e) => {
     const { name, value } = e.target;
     setThumbnailData({ ...thumbnailData, [name]: value });
   };
 
+  // Gestionnaire de changement pour les fichiers du projet
   const handleProjectFileChange = (e) => {
     setProjectData({ ...projectData, project_home: e.target.files[0] });
   };
 
+  // Gestionnaire de changement pour les fichiers de la vignette
   const handleThumbnailFileChange = (e) => {
     const { name } = e.target;
     setThumbnailData({ ...thumbnailData, [name]: e.target.files[0] });
   };
 
+  // Gestionnaire de soumission du formulaire
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -71,7 +76,7 @@ const Add = () => {
 
       // Créer FormData pour thumbnail
       const thumbnailFormData = new FormData();
-      thumbnailFormData.append('project_id', projectRecord.id);
+      thumbnailFormData.append('Projects', projectRecord.id); //Permet de lier Projects à Thumbnails dans la BDD
       thumbnailFormData.append('title', thumbnailData.title);
       thumbnailFormData.append('subtitle', thumbnailData.subtitle);
       thumbnailFormData.append('description', thumbnailData.description);
@@ -192,7 +197,7 @@ const Add = () => {
           Envoyer
           <img src={sendLetter} alt="send icon" width={20} height={20} className="iconSend" />
         </button>
-        {message && <p className="message">{message}</p>}
+        {message && <p className="messageSubmit">{message}</p>}
       </form>
     </div>
   );

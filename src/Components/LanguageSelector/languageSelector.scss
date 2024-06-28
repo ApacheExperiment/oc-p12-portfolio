@@ -1,0 +1,24 @@
+.Translate {
+    &__wrap {
+        display: flex;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        width: 44px;
+        padding: 4px 0px;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        border-radius: 21px;
+        background-color: white;
+        color: #087EA4;
+        z-index: 1;
+        cursor: pointer;
+    }
+    &__icon {
+        width:20px;
+    }
+}

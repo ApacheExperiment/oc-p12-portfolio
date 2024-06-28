@@ -1,0 +1,24 @@
+{   
+    "navbarWelcome": "Accueil",
+    "navbarProjects": "Projets",
+    "navbarSkills": "Compétences",    
+
+    "subtitleWelcome": "Développeur Front-End",
+    "contactMe": "Contactez moi",
+    "about": "Après avoir travaillé pendant plusieurs années dans le milieu du commerce, principalement dans le milieu culturel et les bars spécialisés bières craft. En expérimentant plusieurs postes dont chef d'équipe et de patron associé.<br /><br />J'ai commencé mon apprentissage dans le domaine du développement front-end au sein d'Open Class Rooms sur mon temps libre et j'ai compris très rapidement que ce domaine qui était une curiosité devenait une préoccupation grandissante.<br /><br />J'ai entrepris une reconversion afin de faire valider et d'approfondir mes compétences avec un premier diplôme en développement front-end.  <br /><br />Curieux et passionné, mon objectif est de m'améliorer et d'apprendre davantage dans un domaine qui est en perpétuelle évolution chaque jour.",
+    
+    "projectsTitle": "Projets",
+    "subtitle": "subtitle",
+
+    "addProject": "Ajouter un projet",
+    "readMore": "Lire plus",
+    "deleteProject": "Supprimer le projet",
+
+    "titleSkills": "Compétences",
+    "pSkills": "Mon point d'encrage étant la partie visuelle et l'expérience utilisateur, je cherche néanmoins à comprendre et à apprendre la gestion de données et tout ce qui constitue le développement back-end.",
+
+    "sendForm": "Envoyer",
+    "orDirectlyTo": "Ou bien directement à",
+
+    "developedWith": "Développé avec"
+  }
