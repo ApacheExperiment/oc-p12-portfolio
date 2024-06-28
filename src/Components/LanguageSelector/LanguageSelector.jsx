@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './languageSelector.scss';
-import iconTranslate from '../../assets/img/icon/icon-translate3.png';
+import iconTranslate from '../../assets/img/icon/icon-translate.webp';
 
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
