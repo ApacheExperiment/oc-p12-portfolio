@@ -23,8 +23,3 @@ h3 {
   font-size: 18px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
