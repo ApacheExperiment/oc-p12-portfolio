@@ -16,7 +16,12 @@
 
     "titleSkills": "Skills",
     "pSkills": "My anchor point being the visual part and the user experience, I nevertheless seek to understand and learn data management and everything that constitutes back-end development.",
+    "developmentLangauges": "Development languages",
+    "frameworksAndLibraries": "Frameworks and libraries",
+    "visualTools" : "Visual Tools",
+    "currentlyLearning": "Currently learning",
 
+    "name": "Name",
     "sendForm": "Send",
     "orDirectlyTo": "Or directly to",
 

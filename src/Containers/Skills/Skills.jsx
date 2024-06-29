@@ -40,7 +40,7 @@ export default function Skills() {
             <div className="langagesSkills">
                 <div className="border">
                     <div className="containerSkills">
-                        <h3 className="subtitleSkills">Langages de développement</h3>
+                        <h3 className="subtitleSkills">{t('developmentLangauges')}</h3>
                         <div className="containerIcons">
                             <div className="iconAndP">
                                 <div className="iconWrapper">
@@ -123,7 +123,7 @@ export default function Skills() {
                 </div>
                 <div className="border">
                     <div className="containerSkills">
-                        <h3 className="subtitleSkills">Frameworks et librairies</h3>
+                        <h3 className="subtitleSkills">{t('frameworksAndLibraries')}</h3>
                         <div className="containerIcons">
                             <div className="iconAndP">
                                 <div className="iconWrapper">
@@ -168,7 +168,7 @@ export default function Skills() {
                 </div>
                 <div className="border">
                     <div className="containerSkills">
-                        <h3 className="subtitleSkills">Outils Visuel</h3>
+                        <h3 className="subtitleSkills">{t('visualTools')}</h3>
                         <div className="containerIcons">
                             <div className="iconAndP">
                                 <div className="iconWrapper">
@@ -232,7 +232,7 @@ export default function Skills() {
                 </div>
                 <div className="border">
                     <div className="containerSkills">
-                        <h3 className="subtitleSkills">En cours d'apprentissage</h3>
+                        <h3 className="subtitleSkills">{t('currentlyLearning')}</h3>
                         <div className="containerIcons">
                             <div className="iconAndP">
                                 <div className="iconWrapper">

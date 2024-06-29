@@ -16,7 +16,12 @@
 
     "titleSkills": "Compétences",
     "pSkills": "Mon point d'encrage étant la partie visuelle et l'expérience utilisateur, je cherche néanmoins à comprendre et à apprendre la gestion de données et tout ce qui constitue le développement back-end.",
+    "developmentLangauges": "Langages de développement",
+    "frameworksAndLibraries": "Frameworks et librairies",
+    "visualTools" : "Outils visuel",
+    "currentlyLearning": "En cours d'apprentissage",
 
+    "name": "Nom",
     "sendForm": "Envoyer",
     "orDirectlyTo": "Ou bien directement à",
 

@@ -46,7 +46,7 @@ export default function Form() {
 
     return (
         <form ref={formRef} onSubmit={(e) => handleSubmit(e, formState)} className="form">
-            <label htmlFor="nom" className="label">Nom</label>
+            <label htmlFor="nom" className="label">{t('name')}</label>
             <input 
                 type="text" 
                 name="nom" 
