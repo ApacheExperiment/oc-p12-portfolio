@@ -50,6 +50,10 @@ const imagePaths = {
     pocketbase: {
         initial: require("../../assets/img/icon/Initial/icon-Pocketbase.webp"),
         reverse: require("../../assets/img/icon/Reverse/icon-Pocketbase-Reverse.webp")
+    },
+    java: {
+        initial: require("../../assets/img/icon/Initial/icon-Java.webp"),
+        reverse: require("../../assets/img/icon/Reverse/icon-Java-Reverse.webp")
     }
 };
 
